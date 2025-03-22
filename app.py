@@ -18,7 +18,7 @@ st.subheader("Analyze Your Resume with Respect to a Job")
 genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 
 class GoogleGeminiLLM(LLM):
-    model_name: str = "gemini-pro"
+    model_name: str = "gemini-2.0-flash"
     
     def _call(self, prompt: str, stop=None) -> str:
         model_instance = genai.GenerativeModel(self.model_name)
